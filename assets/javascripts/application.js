@@ -20,3 +20,16 @@ AppleView = Backbone.Marionette.ItemView.extend({
 	className: 'Apple'
 	
 });
+
+ApplesView = Backbone.Marionnete.CompositeView.extend({
+	tagName: "table",
+	id: "Apples",
+	className: "table-striped table bordered",
+	template: "#apples-template",
+	itemView: "appleView",
+	
+	appendHtml: function(collectionView, itenView){
+		collectionView.$("tbody").append(itemView.el);
+	}
+	
+});
