@@ -40,7 +40,20 @@ ApplesView = Backbone.Marionnete.CompositeView.extend({
 
 MyListApp.addInitializer(function(options){
 	var applesView = new applesView({
-		collectionL options.apples
+		collection options.apples
 	});
 	MyListApp.mainRegion.show(applesView);
 });
+
+$(document).ready(function(){
+	var manyApples = new Apples([
+		new Apple({ name: 'Greeb Apple'}),
+		new Apple({ name: 'Red Apple'}),
+		new Apple({ name: 'Blue Apple'}),
+		new Apple({ name: 'Yellow Apple'}),
+	]);
+
+	MyListApp.start({manyApples: manyApples});
+});
+	
+	
