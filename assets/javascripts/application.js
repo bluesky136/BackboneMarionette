@@ -28,6 +28,10 @@ ApplesView = Backbone.Marionnete.CompositeView.extend({
 	template: "#apples-template",
 	itemView: "appleView",
 	
+	initialize: function(){
+		this.listenTo(this.collection, "sort", this.renderCollection);
+	},
+	
 	appendHtml: function(collectionView, itenView){
 		collectionView.$("tbody").append(itemView.el);
 	}
