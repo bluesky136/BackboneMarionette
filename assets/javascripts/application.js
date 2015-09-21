@@ -37,3 +37,10 @@ ApplesView = Backbone.Marionnete.CompositeView.extend({
 	}
 	
 });
+
+MyListApp.addInitializer(function(options){
+	var applesView = new applesView({
+		collectionL options.apples
+	});
+	MyListApp.mainRegion.show(applesView);
+});
