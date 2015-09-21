@@ -1,6 +1,6 @@
 MyListApp = new Backbone.Marionette.Application();
 
-MyListApp.addRegion({
+MyListApp.addRegions({
 	
 	mainRegion: "#content"
 	
@@ -21,16 +21,16 @@ AppleView = Backbone.Marionette.ItemView.extend({
 	
 });
 
-ApplesView = Backbone.Marionnete.CompositeView.extend({
+ApplesView = Backbone.Marionette.CompositeView.extend({
 	tagName: "table",
 	id: "Apples",
 	className: "table-striped table bordered",
 	template: "#apples-template",
 	itemView: "AppleView",
 	
-	initialize: function(){
-		this.listenTo(this.collection, "sort", this.renderCollection);
-	},
+	 initialize: function(){
+    this.listenTo(this.collection, "sort", this.renderCollection);
+  },
 	
 	appendHtml: function(collectionView, itenView){
 		collectionView.$("tbody").append(itemView.el);
@@ -39,8 +39,8 @@ ApplesView = Backbone.Marionnete.CompositeView.extend({
 });
 
 MyListApp.addInitializer(function(options){
-	var applesView = new applesView({
-		collection options.apples
+	var applesView = new ApplesView({
+		collection: options.Apples
 	});
 	MyListApp.mainRegion.show(ApplesView);
 });

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 
@@ -23,7 +22,12 @@
     <script type="text/template" id="apples-template">
       <thead>
         <tr class='header'>
+          <th>Rank</th>
+          <th>Votes</th>
           <th>Name</th>
+          <th>Image</th>
+          <th></th>
+          <th></th>
         </tr>
       </thead>
       <tbody>
@@ -31,7 +35,15 @@
     </script>
 
     <script type="text/template" id="apple-template">
+      <td><%= rank %></td>
+      <td><%= votes %></td>
       <td><%= name %></td>
+      <td><img class='angry_cat_pic' src='<%= image_path %>' /></td>
+      <td>
+        <div class='rank_up'><img src='assets/images/up.gif' /></div>
+        <div class='rank_down'><img src='assets/images/down.gif' /></div>
+      </td>
+      <td><a href="#" class="disqualify">Disqualify</a></td>
     </script>
   </body>
 </html>
