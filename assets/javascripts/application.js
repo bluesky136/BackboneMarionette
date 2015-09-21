@@ -26,7 +26,7 @@ ApplesView = Backbone.Marionnete.CompositeView.extend({
 	id: "Apples",
 	className: "table-striped table bordered",
 	template: "#apples-template",
-	itemView: "appleView",
+	itemView: "AppleView",
 	
 	initialize: function(){
 		this.listenTo(this.collection, "sort", this.renderCollection);
@@ -42,7 +42,7 @@ MyListApp.addInitializer(function(options){
 	var applesView = new applesView({
 		collection options.apples
 	});
-	MyListApp.mainRegion.show(applesView);
+	MyListApp.mainRegion.show(ApplesView);
 });
 
 $(document).ready(function(){
