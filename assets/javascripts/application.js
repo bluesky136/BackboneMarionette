@@ -47,8 +47,8 @@ MyListApp.addInitializer(function(options){
 
 $(document).ready(function(){
 	var manyApples = new Apples([
-		new Apple({ name: 'Greeb Apple'}),
-		new Apple({ name: 'Red Apple'}),
+		new Apple({ name: 'Greeb Apple', image_path: 'assets/images/cat2.jpg'}),
+		new Apple({ name: 'Red Apple', image_path: 'assets/images/cat3.jpg'}),
 		new Apple({ name: 'Blue Apple'}),
 		new Apple({ name: 'Yellow Apple'}),
 	]);
